@@ -1,0 +1,384 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+    <head>
+        <!-- meta data -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+        <!--font-family-->
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&amp;subset=devanagari,latin-ext" rel="stylesheet">
+        
+        <!-- title of site -->
+        <title>SF311 DATA VISUALIZATION</title>
+
+        <!-- For favicon png -->
+		<link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
+       
+        <!--font-awesome.min.css-->
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+		<!--flat icon css-->
+		<link rel="stylesheet" href="assets/css/flaticon.css">
+
+		<!--animate.css-->
+        <link rel="stylesheet" href="assets/css/animate.css">
+
+        <!--owl.carousel.css-->
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+		<link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+		
+        <!--bootstrap.min.css-->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		
+		<!-- bootsnav -->
+		<link rel="stylesheet" href="assets/css/bootsnav.css" >	
+        
+        <!--style.css-->
+        <link rel="stylesheet" href="assets/css/style.css">
+        
+        <!--responsive.css-->
+        <link rel="stylesheet" href="assets/css/responsive.css">
+        
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		
+        <!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    </head>
+	
+	<body>
+		<!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+		
+		<!-- top-area Start -->
+		<header class="top-area">
+			<div class="header-area">
+				<!-- Start Navigation -->
+			    <nav class="navbar navbar-default bootsnav navbar-fixed dark no-background">
+
+			        <div class="container">
+
+			            <!-- Start Header Navigation -->
+			            <div class="navbar-header">
+			                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+			                    <i class="fa fa-bars"></i>
+			                </button>
+			                <a class="navbar-brand" href="index.html">SF311 DATA VISUALIZATION</a>
+			            </div><!--/.navbar-header-->
+			            <!-- End Header Navigation -->
+
+			            <!-- Collect the nav links, forms, and other content for toggling -->
+			            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
+			                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+			                <li class="smooth-menu active"></li>
+			                    <li class="smooth-menu"><a href="#housing">First Analysis</a></li>
+			                    <li class="smooth-menu"><a href="#housing">MADS write smth...</a></li>
+			                    <li class="smooth-menu"><a href="#demographics">Neighbourhood clustering</a></li>
+			                    <li class="smooth-menu"><a href="#environment">Covid-19</a></li>
+			                </ul><!--/.nav -->
+			            </div><!-- /.navbar-collapse -->
+			        </div><!--/.container-->
+			    </nav><!--/nav-->
+			    <!-- End Navigation -->
+			</div><!--/.header-area-->
+
+		    <div class="clearfix"></div>
+
+		</header><!-- /.top-area-->
+		<!-- top-area End -->
+	
+		<!--welcome-hero start -->
+		<section id="welcome-hero" class="welcome-hero">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<div class="header-text">
+							<h2>welcome <br> to a data trip <br> in <span>s</span>an <span>f</span>rancisco <span>.</span>   </h2>
+							<p>enjoy the insights</p>
+							<a href="assets/download/browney.txt">Access Notebook</a>
+						</div><!--/.header-text-->
+					</div><!--/.col-->
+				</div><!-- /.row-->
+			</div><!-- /.container-->
+
+		</section><!--/.welcome-hero-->
+		<!--welcome-hero end -->
+
+
+
+		<section id="intro" class="about">
+			<div class="section-heading text-center">
+				<h2>INTRODUCTION</h2>
+			</div>
+			<div class="container">
+				<div class="about-content">
+					<div class="row">						
+						<div class="single-about-txt">
+							<h3>
+								TEXT HERE <br>
+								We want to unveil some insights about San Francisco's citizens complaints by using its Open Data of the SF311 service.
+							</h3>
+							<p>
+								Some text here 
+								<br>
+								<img src="assets/images/complaint-count-by-24h-cycle.png" alt="Trees wordcloud" >
+								<br>
+								Some more text here
+							</p>
+							
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</section><!--/.about-->
+		<!--about end -->
+
+
+
+		<!--EDIT HECTOR-->
+		<!--housing start -->
+		<section id="housing" class="about">
+		
+			<div class="section-heading text-center">
+				<h2>MADS PART</h2>
+			</div>
+			<div class="container">
+			 
+				<div class="about-content">
+					<div class="row">						
+						<div class="single-about-txt">
+							<h3>Visualising geographical distribution of service complaints.                        
+                            </h3>
+                            <p style="text-align:justify;text-indent: 0px;">
+								In the following we will be visualising the geographical distribution of service complaints within different categories. We will be looking at the development of this spatial distribution over years, months and hours, thereby investigating both the spatial and temporal development of the service complaints.
+								<br><br>
+								For this purpose we constructed a scatterplot taking the longitude and latitude of each service complaints and plotting these points on map of San Fransisco. When plotting observation we defined two different approaches:
+								
+							</p>	
+							<p style="text-align:justify;text-indent: 20px;">1. Sample a fixed number of complaints from each category.
+							</p>
+							<p style="text-align:justify;text-indent: 20px;">2. Sample a fraction of complaints from each category.
+							</p>
+							<p style="text-align:justify;text-indent: 0px;">							
+
+								The first approach allows solely for investigation of the development in spatial patterns in the categories over time, whereas the second approach allows us to investigate how the total number of complaints changes during the year, month and hour. Generally a scatterplot is not well suited for visualising count data, but when used in conjunction with the bar plot in part XX, the scatter plot allows us to investigate whether this changes in the total number of complaints is due to local or global changes in the geographical distribution of complaints.
+							</p>
+							<p style="text-align:justify;text-indent: 20px;">d
+							</p>
+							<p style="text-align:justify;text-indent: 20px;">f
+							</p>
+							<p style="text-align:justify;">
+								TEXT HERE
+								<br>
+								<iframe width="900" height="800" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~mmestre/13.embed"></iframe>
+								<br>
+								TEXT HERE <br>
+								<br>
+								<iframe width="900" height="800" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~mmestre/19.embed"></iframe>
+								<br>
+								<br>
+								<iframe width="900" height="800" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~mmestre/24.embed"></iframe>
+								<br>
+								<br>
+								<iframe width="900" height="800" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~mmestre/48.embed"></iframe>
+								<br>
+								
+
+								
+								Please go ahead and play with it, depending on your screen you may need to resize your browser window to better visualize it. We recommend to see 
+								all the 4 graphs at the same time. For a full-screen visualization go here: <a href="https://sodata2.herokuapp.com/" target="_blank">find the app here</a><br>
+							</p>
+							<!--center>
+								<iframe src="https://sodata2.herokuapp.com/" width=1200 height=1200 </iframe>
+							</center-->
+
+							
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</section><!--/.about-->
+		<!--about end -->
+
+
+		<!--EDIT JORGE-->
+		<!--demographics start -->
+		<section id="demographics" class="about">
+			<div class="section-heading text-center">
+				<h2>DEMOGRAPHICS</h2>
+			</div>
+			<div class="container">
+				<div class="about-content">
+					<div class="row">						
+						<div class="single-about-txt">
+							<h3>
+                                The explainer jupyter notebook for this section is available <a href="https://nbviewer.jupyter.org/github/datatouristbcn/datatouristbcn.github.io/blob/master/jupyter_notebook/BarcelonaCity_demographics.ipynb" target="_blank">here</a>. <br><br>
+                                Link to nbviewer: <a href="https://nbviewer.jupyter.org/github/datatouristbcn/datatouristbcn.github.io/blob/master/jupyter_notebook/BarcelonaCity_demographics.ipynb" target="_blank">Go to nbviewer</a><br>
+                                (https://nbviewer.jupyter.org/github/datatouristbcn/datatouristbcn.github.io/blob/master/jupyter_notebook/BarcelonaCity_demographics.ipynb) <br>
+                                Link to Github repo: <a href="https://github.com/datatouristbcn/datatouristbcn.github.io/blob/master/jupyter_notebook/BarcelonaCity_demographics.ipynb" target="_blank">Go to Github</a><br>
+                                (https://github.com/datatouristbcn/datatouristbcn.github.io/blob/master/jupyter_notebook/BarcelonaCity_demographics.ipynb) <br>
+                            </h3>
+							<h3>
+								TEXT HERE
+							</h3>
+							<p style="text-align:justify;">
+								TEXT HERE
+							</p>
+							
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</section><!--/.about-->
+		<!--about end -->
+
+
+
+
+		<!--EDIT ARNAU-->
+		<!--environment start -->
+		<section id="environment" class="about">
+			<div class="section-heading text-center">
+				<h2>ENVIRONMENT</h2>
+			</div>
+			<div class="container">
+				<div class="about-content">
+					<div class="row">						
+						<div class="single-about-txt">
+							<h3>
+								The explainer jupyter notebook for this section is available <a href="https://nbviewer.jupyter.org/github/arnaugp/DTU_socialdataanalysis/blob/master/Final_project/Project_green_part.ipynb" target="_blank">here</a>. <br><br>
+								Link to nbviewer: <a href="https://nbviewer.jupyter.org/github/arnaugp/DTU_socialdataanalysis/blob/master/Final_project/Project_green_part.ipynb" target="_blank">Go to nbviewer</a><br>
+								(https://nbviewer.jupyter.org/github/arnaugp/DTU_socialdataanalysis/blob/master/Final_project/Project_green_part.ipynb) <br>
+								Link to Github repo: <a href="https://github.com/arnaugp/DTU_socialdataanalysis/blob/master/Final_project/Project_green_part.ipynb" target="_blank">Go to Github</a><br>
+								(https://github.com/arnaugp/DTU_socialdataanalysis/blob/master/Final_project/Project_green_part.ipynb) <br>
+							</h3>
+							<p style="text-align:justify;">
+								For the first time in history, more than 50 percent of the world’s population now lives in towns and cities. By 2050, this number is expected to increase to 66 percent.  
+								Urban trees can help to mitigate some of the negative impacts and social consequences of urbanization, and thus make cities more resilient to these changes. Trees provide its citizens shade during the summer, beautify the neighbourhoods, help reduce noise and air pollution, and support urban wildlife.
+								Further than these priceless benefits, our urban forest return includes stormwater interception, energy conservation, air pollutant removal, and carbon dioxide storage.  
+								Our publicly owned trees are as much of an asset to us as our streets, sewers, bridges, and public buildings.<br><br>
+
+
+								People in cities live in a constant rush. Hyperconnection through social networks barely let them move the eyes out of the smartphone screen and observe the surroundings. Urban trees are a silent part of the cities' landscape. However, they are certainly unknown for us, but hopefully Data Visualization is going to help us discover some insights, such as:<br>
+								- Which are the most common tree species?<br>
+								- How are they distributed?<br>
+								- How many trees per inhabitant does Barcelona have?<br>
+								- Which type of irrigation is nowadays used?<br>
+								- Which is the oxygen balance of Barcelona (i.e. trees produced oxygen vs consumed by people)? <br>
+					      	</p>
+							<br>
+							<p style="text-align:justify;">
+								Barcelona has as much as <b>203.240</b> urban trees.<br>
+								There is a diversity of <b>439</b> different tree species.
+								<br>
+								<img src="assets/images/trees/trees_wc.png" alt="Trees wordcloud" height="500" width="500">
+								<br>
+								Barcelona territory is <b>101.3</b>  squared kilometres and the total population in 2019 was <b>1.636.762</b> inhabitants.
+								<br>
+								According to some estimations, a tree produces around 100 kg of oxygen every year, while each inhabitant consumes around 740 kg of oxygen every year.
+								<br>
+								Considering these data, Barcelona has a total of <b>2.006</b> trees/square km, the rate of trees per inhabitant is <b>0,12</b> trees/inhabitant and the delta of oxygen (i.e. oxygen produced by trees-oxygen consumed by people) is <b>-1190.88</b> millions of kg.
+								<br>
+
+								<br>
+								The trees irrigation methods are divided into 6 categories.
+								Drip and Hose are the most used methods. Drip was the most installed type, with a big difference, during the years 2010 and 2011. Since then, new trees keep using Drip but the trend went down. Instead, hose usage increased during 2016 and 2017 to drop again in 2018.
+								<br>
+								The following plot shows the distribution of trees date of planting according to the irrigation type by Year and Year-Month:
+								<br>
+								<iframe width="900" height="800" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~mmestre/7.embed"></iframe>
+								<br>
+								When comparing trees irrigation type with the tree pit surface or support, drip, sprinkling and diffusion show clear and interesting patterns.
+								<br>
+								- Drip is mainly used when the Tree pit surface is pavement. It is not the main irrigation type in any other Tree pit surface. Trees in the pavement (probably next to roads or in the streets) need the water in a concrete point and therefore other irrigation types that would spread water in a bigger space cannot be used.
+								<br>
+								- Sprinkling and diffusion are the main irrigation types when the Tree pit surfaces are grass, grass with vegetation and sandstone with vegetation. Trees in this surfaces are probably in gardens and parks, therefore the irrigation type is probably also irrigating the grass and plants around.
+								<br>
+								The following plots show the distribution of trees irrigation type according to the tree pit surface or support:
+								<br>
+								<iframe width="1000" height="700" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~arnau.gp/40.embed"></iframe>
+								<br>
+								<br>
+								<iframe width="1000" height="700" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~arnau.gp/38.embed"></iframe>
+								<br>
+								<br>
+								<iframe width="1000" height="700" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~arnau.gp/42.embed"></iframe>
+								<br>
+								<br>
+								<iframe width="1000" height="700" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~arnau.gp/44.embed"></iframe>
+								<br>
+								Now, it is time to see which is the relation between the tree specie and the size and edge of the tree pit.
+								<br>
+								The following plot shows the distribution of tree species according to the pit size:
+								<br>
+								<iframe width="1000" height="700" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~arnau.gp/36.embed"></iframe>
+								<br>
+								<br>
+								<iframe width="1000" height="700" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~arnau.gp/34.embed"></iframe>
+								<br>
+								- Platanus x hispanica is by far the dominating tree specie in the streets of Barcelona. Celtis australis is the second most common tree specie with about half of the total Platanus x hispanica trees.
+								<br>
+								- Prunus cerasifera is the specie with the highest increase in number of new plantations during the last decade.
+								<br>
+								- Celtis australis is the specie with the highest decrease in number of new plantations during the last decade.
+								<br>
+								- October until April are the months where most of the new plantations take place. Summer months register the lowest number of new plantations. High temperatures and people on holidays could be some of the reasons.
+								<br>
+								The following plots show the distribution of trees date of planting according to the specie:
+								<br>
+								<iframe width="1000" height="700" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~arnau.gp/46.embed"></iframe>
+								<br>
+								<br>
+								<iframe width="1000" height="700" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~arnau.gp/52.embed"></iframe>
+								<br>
+								In the following density scatter plot it can be seen how the Top 6 tree species are distributed accross Barcelona using its coordinates representation. The location of trees is concentrated on the South-East side of the city. Platanus x hispanica highest concentration is in the East extreme of the city. Celta australis is clearly concentrated in Barcelona's downtown.
+								<br>
+								<img src="assets/images/trees/heatmap_subplots_tree_type.png" alt="Heatmap by tree specie" height="1000" width="700">
+								<br>
+								<br>
+								Finally, the gardens and parks of Barcelona can be also found on the following map.
+								<br>
+								<br>
+								<iframe width="1000" height="700" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~arnau.gp/48.embed"></iframe>
+								<br>
+							</p>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</section><!--/.about-->
+		<!--environment end -->
+
+
+	    <footer id="footer-copyright" class="footer-copyright">
+			<div class="container">
+				<div class="hm-footer-copyright text-center">
+					<p>
+						© Content developed by Arnau, Hector and Jorge for the course Social data analysis and visualization (02806) offered by the Technical University of Denmark. <br>Template designed and developed by <a href="https://www.themesine.com/">themesine</a>
+					</p><!--/p-->
+				</div><!--/.text-center-->
+			</div><!--/.container-->
+
+			<div id="scroll-Top">
+				<div class="return-to-top">
+					<i class="fa fa-angle-up " id="scroll-top"></i>
+				</div>
+				
+			</div><!--/.scroll-Top-->
+		</footer>
+		
+        
+    </body>
+	
+</html>
